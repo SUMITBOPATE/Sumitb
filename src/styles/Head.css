@@ -1,0 +1,47 @@
+ General styles */
+body {
+  margin: 0;
+  font-family: "Open Sans", serif;
+  background-color: white;
+}
+
+
+
+
+
+/* Main Content */
+.main-content {
+  max-width: 48rem;
+  margin: 1.5rem auto;
+  
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  /* line-height: 1rem; */
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-family: "Open Sans", serif;
+  font-style: normal;
+  font-size: 1.25rem;
+  color: #21262c;
+  max-width: 36rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}

@@ -1,0 +1,40 @@
+.about-section {
+    
+    max-width: 800px;
+    height: auto;
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    overflow: hidden;
+}
+.about-section h2{
+    font-size: 2vw;
+}
+.about-content{
+    padding-bottom: 12px;
+}
+.about-text {
+    padding-top: 6px;
+    
+
+    text-align: left;
+    color: #7a7a7a;
+ 
+    
+}
+
+.about-text p{
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+

@@ -1,0 +1,19 @@
+.skill-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 1rem;
+}
+.skill-card{
+  background-color: rgb(241, 240, 240);
+    border-radius: 8px;
+  padding: 0.25rem 1rem;
+}
+.skill-card span{
+    font-family: "Open Sans", serif;
+    font-size: .85rem;
+    font-weight: 600;
+    line-height: 1rem;
+    
+}
