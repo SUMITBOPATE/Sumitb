@@ -1,51 +1,98 @@
-
+import { ExternalLink, Github } from 'lucide-react';
 import '../styles/Projects.css';
 
 const Projects = () => {
     const projects = [
         {
             id: 1,
-            title: "Cash Management System",
-            description: "Cash Management System is a web application that helps users to manage their cash flow. It allows users to track their income and expenses, set budgets, and view reports.",
-            image: "project1.jpg",
-            technologies: ["React", "Node.js", "MongoDB"],
-            githubLink: "https://github.com/username/project1",
-            liveLink: "https://project1.com"
+            title: "Draftlee",
+            description: "Privacy based local text editor with rich features .",
+            image: "draftleebrand.png",
+            technologies: ["React.js", "Tailwind CSS", "PDF.js","Tiptap"],
+            githubLink: "https://github.com/SUMITBOPATE/Draftlee",
+            liveLink: "https://draftlee.vercel.app/",
+            isLive: true
         },
         {
             id: 2,
-            title: "My Space App",
-            description: "A Productivity app that helps users to manage their tasks, set reminders, and take notes. It also has a feature to track the time spent on tasks.",
-            image: "project2.jpg",
-            technologies: ["React", "Express", "PostgreSQL"],
-            githubLink: "https://github.com/username/project2",
-            liveLink: "https://project2.com"
-        },
-       
+            title: "CropSho",
+            description: "Web platform to help local(meesho) sellers manage daily operations more efficiently.",
+            image: "cropshobrand.png",
+            technologies: ["React", "Tailwind CSS", "Pdf-lib"],
+            githubLink: "https://github.com/SUMITBOPATE/CropSho",
+            liveLink: "https://cropsho.online/",
+            isLive: true
+        }
     ];
 
     return (
         <section className="projects-section" id="projects">
-            <p className='subheading'>My Projects</p>
-            <div className="projects-grid">
+            <h2 className="projects-heading">
+                What I am Building
+            </h2>
+
+            <div className="projects-list">
                 {projects.map((project) => (
-                    <div key={project.id} className="project-card">
-                      
-                        <h3>{project.title}</h3>
-                        
-                        <div className="technologies">
-                            {project.technologies.map((tech, index) => (
-                                <span key={index} className="tech-tag">{tech}</span>
-                            ))}
+                    <div key={project.id} className="project-item">
+                        {/* Project Image */}
+                        <div className="project-image-wrapper">
+                            <div className="project-thumbnail">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                />
+                            </div>
                         </div>
-                        <div className='project-line'></div>
-                        <p>{project.description}</p>
-                        {/* <div className='project-line'></div> */}
-                        <div className="project-links">
-                           <button>  <a href={project.githubLink} target="_blank" rel="noopener noreferrer">GitHub</a></button>
-                           <button> <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a></button>
+
+                        {/* Project Content */}
+                        <div className="project-info">
+                            {/* Title and Live Status */}
+                            <div className="project-top">
+                                <h3 className="project-name">{project.title}</h3>
+                                {project.isLive && (
+                                    <span className="live-status">
+                                        <span className="live-dot">
+                                            <span className="live-dot-pulse" />
+                                        </span>
+                                        <span className="live-text">Live</span>
+                                    </span>
+                                )}
+                            </div>
+
+                            {/* Description */}
+                            <p className="project-desc">{project.description}</p>
+
+                            {/* Technologies */}
+                            <div className="project-tech">
+                                {project.technologies.map((tech, index) => (
+                                    <span key={index} className="tech-item">
+                                        {tech}
+                                    </span>
+                                ))}
+                            </div>
+
+                            {/* Links */}
+                            <div className="project-links">
+                                <a
+                                    href={project.liveLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="project-link"
+                                >
+                                    <ExternalLink size={14} />
+                                    <span>Live</span>
+                                </a>
+                                <a
+                                    href={project.githubLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="project-link"
+                                >
+                                    <Github size={14} />
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
                         </div>
-                        {/* <img src={project.image} alt={project.title} /> */}
                     </div>
                 ))}
             </div>
