@@ -57,15 +57,29 @@
   .home-main {
     padding: var(--spacing-sm) 0 var(--spacing-xs) 0;
   }
+
+  .high-precision-time {
+    font-size: var(--text-md);
+  }
 }
 
 @media (max-width: 480px) {
   .home-headline {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
   }
 
   .home-main {
     padding: var(--spacing-xs) 0 0.375rem 0;
+  }
+
+  .high-precision-time {
+    font-size: var(--text-base);
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .date-display {
+    display: none;
   }
 }
 

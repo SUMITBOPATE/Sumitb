@@ -106,10 +106,26 @@
     z-index: 10;
 }
 .project-image-wrapper {
-    flex : 0 0 320px;
+    flex: 0 0 320px;
     border: var(--border-solid);
     border-radius: 12px;
     padding: 4px;
+}
+
+@media (max-width: 768px) {
+    .project-image-wrapper {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 3px;
+    }
 }
 
 /* Project Image */

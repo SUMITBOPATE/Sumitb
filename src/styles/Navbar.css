@@ -104,8 +104,19 @@
     gap: var(--spacing-md);
   }
 
+  .nav-link {
+    padding: 0.4rem 0.6rem;
+    font-size: var(--text-sm);
+  }
+
   .resume-button {
     padding: 0.4rem 0.8rem;
+    font-size: var(--text-sm);
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
   }
 }
 

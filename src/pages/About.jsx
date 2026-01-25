@@ -21,11 +21,11 @@ const About = () => {
                         improving my UI and architecture skills.
                         <br></br>
                         &nbsp;
-                      <p>  You can reach out to me on @email, LinkedIn or on X(Twitter)</p>
+                      {/* <p>  You can reach out to me on @email, LinkedIn or on X(Twitter)</p> */}
                     </p>
-                    &nbsp;
-                    <h2>Beyond Coding</h2>
-                    &nbsp;
+               
+                    {/* <h2>Beyond Coding</h2> */}
+                   
                     <p className="about-text">
                               When I’m not coding or  designing, you’ll probably find me scrolling X or watching Cricket, 
                              or reading startup related news or curating the perfect music playlist

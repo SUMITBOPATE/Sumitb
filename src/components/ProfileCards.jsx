@@ -14,7 +14,7 @@ export const ProfileCards = () => {
  <div className="profile-card-left">
      
       <p> <Mars  size={24} className="profile-icon" />he/him</p> 
-      <p><Globe size={24} className="profile-icon" />subo.xyz</p> 
+      <p><Globe size={24} className="profile-icon" />sumitbopte.com</p> 
  </div>
     </div>
   );

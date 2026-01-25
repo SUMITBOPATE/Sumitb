@@ -1,4 +1,4 @@
-import { Github,  ArrowUpRight } from 'lucide-react';
+import { Github } from 'lucide-react';
 import '../styles/Footer.css';
 
 const Footer = () => {
