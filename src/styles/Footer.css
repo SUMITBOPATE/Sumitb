@@ -109,14 +109,17 @@
 .footer-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
     font-family: var(--font-primary);
     font-size: var(--text-base);
     font-weight: var(--font-semibold);
     text-decoration: none;
     border-radius: var(--radius-md);
     transition: all var(--transition-fast);
+    min-height: var(--touch-target-min);
+    min-width: 120px;
 }
 
 .footer-btn-secondary {
