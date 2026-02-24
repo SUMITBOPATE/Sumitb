@@ -12,8 +12,11 @@ const About = () => {
                 <div className="about-content">
                     <p className="about-text">
                         I love to build products people love to use and improve their lives.
-                        I am a quick learner and I am always looking for ways to improve
-                        my skills and learn new technologies.
+                        I always believe main goal of technology is to improve human life and 
+                        I wanted to be part of it, right now in the form of software development and design 
+                        . If future demand changes I am open to learn and adapt to it 
+                        I am a quick learner and I am always looking for ways to improve.
+                       
                         I am a frontend developer learning full-stack development,
                         focused on building clean, user-friendly web applications
                         with HTML, CSS, JavaScript, and React. I enjoy turning
@@ -27,7 +30,7 @@ const About = () => {
                     {/* <h2>Beyond Coding</h2> */}
                    
                     <p className="about-text">
-                              When I’m not coding or  designing, you’ll probably find me scrolling X or watching Cricket, 
+                              When I’m not coding or  designing, you’ll probably find me writing on  X , enjoying details in  Cricket, 
                              or reading startup related news or curating the perfect music playlist
                               I love to write and read about peoples </p>
                 </div>

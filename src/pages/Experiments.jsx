@@ -6,7 +6,7 @@ const Experiments = () => {
     return (
         <div className="about-page">
             <Link to="/" className="back-link">
-                <ArrowLeft size={14} style={{ marginRight: '4px', verticalAlign: 'middle' }} />
+                <ArrowLeft size={16} style={{ marginRight: '6px', verticalAlign: 'middle' }} />
                 Back
             </Link>
 
@@ -17,13 +17,15 @@ const Experiments = () => {
                     <span className="corner-br" />
                 </h1>
 
+                <div className="about-tagline">
+                    Building, breaking, and learning
+                </div>
+
                 <div className="about-content">
-                    <p className="about-text" style={{
-                        textAlign: 'center',
-                        fontSize: 'var(--text-xl)',
-                        padding: '4rem 0'
-                    }}>
-                        Coming Soon
+                    <p className="about-text">
+                        I'm currently working on some exciting projects.
+                        Check back soon for updates on my experiments with new technologies,
+                        coding challenges, and creative experiments.
                     </p>
                 </div>
             </div>

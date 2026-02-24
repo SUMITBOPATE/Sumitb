@@ -3,8 +3,20 @@ import '../styles/Projects.css';
 
 const Projects = () => {
     const projects = [
-        {
+            {
             id: 1,
+            title: "Aptix",
+            description: "Aptitude Platform for students to practice and improve their skills.",
+            image: "aptixbrand.png",
+            technologies: ["React.js", "Tailwind CSS", "Supabase"],
+            githubLink: "https://github.com/SUMITBOPATE/AptiX",
+            liveLink: "https://aptix-seven.vercel.app/",
+            isLive: false,
+            isBuilding: true
+        },
+
+        {
+            id: 2,
             title: "Draftlee",
             description: "Privacy based local text editor with rich features .",
             image: "draftleebrand.png",
@@ -13,8 +25,9 @@ const Projects = () => {
             liveLink: "https://draftlee.vercel.app/",
             isLive: true
         },
+        
         {
-            id: 2,
+            id: 3,
             title: "CropSho",
             description: "Web platform to help local(meesho) sellers manage daily operations more efficiently.",
             image: "cropshobrand.png",
@@ -23,6 +36,7 @@ const Projects = () => {
             liveLink: "https://cropsho.online/",
             isLive: true
         }
+
     ];
 
     return (
@@ -55,6 +69,14 @@ const Projects = () => {
                                             <span className="live-dot-pulse" />
                                         </span>
                                         <span className="live-text">Live</span>
+                                    </span>
+                                )}
+                                {project.isBuilding && (
+                                    <span className="building-status">
+                                        <span className="building-dot">
+                                            <span className="building-dot-pulse" />
+                                        </span>
+                                        <span className="building-text">Building</span>
                                     </span>
                                 )}
                             </div>

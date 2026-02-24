@@ -1,24 +1,24 @@
 /* Navbar base styles */
 .navbar {
-    width: 100%;
-    border-bottom: 1px solid var(--color-border-light);
-    font-family: var(--font-primary);
-    font-optical-sizing: auto;
-    border: var(--border-solid);
-    position: sticky;
-    top: 0;
-    background-color: var(--color-white);
-    z-index: 1000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-light);
+  font-family: var(--font-primary);
+  font-optical-sizing: auto;
 }
 
 .navbar-container {
-    max-width: var(--section-max-width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem var(--section-padding-x);
-    min-height: var(--touch-target-md);
+  max-width: var(--section-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--section-padding-x);
+  /* Use height instead of padding for vertical centering to ensure stability */
+  height: 72px; 
 }
 
 /* Logo */
@@ -26,155 +26,105 @@
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding-left: 5px;
+  transition: opacity var(--transition-fast);
+  /* Touch target assurance */
   min-width: 44px;
   min-height: 44px;
-  justify-content: center;
 }
 
 .logo-icon {
   color: var(--color-dark);
-  transition: color var(--transition-fast);
   width: 32px;
   height: 32px;
+  display: block;
 }
 
-.navbar-logo:hover .logo-icon {
-  color: var(--color-text-secondary);
+.navbar-logo:hover {
+  opacity: 0.7;
 }
 
-/* Navigation links */
+/* Navigation links wrapper */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  gap: 1.5rem; /* Increased gap for better hierarchy */
 }
 
+/* Base Link Style */
 .nav-link {
   font-size: var(--text-sm);
   color: var(--color-text-primary);
   text-decoration: none;
-  transition: color var(--transition-fast);
   font-weight: var(--font-medium);
-  border: var(--border-solid);
-  padding: 0.5rem 0.75rem;
-  border-radius: 30px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-              0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  min-height: var(--touch-target-min);
+  transition: all var(--transition-fast);
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-.nav-link:active {
-  scale: 0.97;
+  padding: 0.5rem 0.25rem; /* Optical alignment */
 }
 
 .nav-link:hover {
-  filter: blur(0.5px);
+  color: var(--color-text-secondary);
 }
 
-/* Resume button */
+/* Experiments/Resume button - The "Pill" */
 .resume-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-xs);
+  gap: 0.5rem;
   background-color: var(--color-dark);
   color: var(--color-white);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1.25rem;
   border-radius: 9999px;
   font-size: var(--text-sm);
   font-weight: var(--font-medium);
-  transition: all var(--transition-fast);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
-              0 1px 2px -1px rgba(0, 0, 0, 0.1);
-  min-height: var(--touch-target-min);
-  min-width: var(--touch-target-min);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   white-space: nowrap;
 }
 
-.resume-button:active {
-  scale: 0.97;
+.resume-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
 }
 
-.resume-button:hover {
-  filter: blur(0.4px);
-  filter: drop-shadow(0px 0.5px 1px var(--color-text-secondary));
+.resume-button:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .arrow-icon {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  transition: transform var(--transition-fast);
+}
+
+.resume-button:hover .arrow-icon {
+  transform: translate(1px, -1px);
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0.625rem var(--section-padding-x);
+    height: 64px;
+    padding: 0 var(--section-padding-x);
   }
-
+  
   .nav-links {
-    gap: var(--spacing-xs);
-  }
-
-  .nav-link {
-    padding: 0.5rem 0.625rem;
-    font-size: var(--text-sm);
-  }
-
-  .resume-button {
-    padding: 0.5rem 0.875rem;
-    font-size: var(--text-sm);
-  }
-
-  .logo-icon {
-    width: 30px;
-    height: 30px;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .navbar-container {
-    padding: 0.625rem var(--section-padding-x-small);
-    gap: var(--spacing-xs);
-  }
-
-  .nav-links {
-    gap: var(--spacing-sm);
+    padding: 0 var(--section-padding-x-small);
   }
 
   .nav-link {
-    font-size: var(--text-sm);
-    padding: 0.5rem 0.625rem;
+    font-size: 0.875rem;
   }
 
   .resume-button {
-    font-size: var(--text-sm);
-    padding: 0.5rem 0.75rem;
-  }
-
-  .arrow-icon {
-    width: 14px;
-    height: 14px;
-  }
-
-  .logo-icon {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-@media (max-width: 360px) {
-  .nav-link {
-    font-size: var(--text-xs);
-    padding: 0.4rem 0.5rem;
-  }
-
-  .resume-button {
-    font-size: var(--text-xs);
-    padding: 0.4rem 0.625rem;
+    padding: 0.5rem 1rem;
   }
 }

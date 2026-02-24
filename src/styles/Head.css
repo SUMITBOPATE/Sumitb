@@ -9,27 +9,76 @@
 .home-main {
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: start;
   padding: var(--spacing-md) 0 var(--spacing-sm) 0;
+    font-family: Inter, sans-serif;
+  font-weight: var(--font-semibold);
+  color: var(--color-dark);
+  line-height: var(--leading-tight);
 }
 
 .home-headline {
+
   color: var(--color-dark);
   position: relative;
   line-height: var(--leading-tight);
   margin: 0;
   text-shadow: 0 4px 6px rgba(94, 94, 94, 0.1);
-  font-family: var(--font-primary);
+  font-family: Inter, sans-serif;
   font-weight: var(--font-bold);
   /* Fluid typography: scales smoothly from 1.875rem at 480px to 3.5rem at 1200px+ */
-  font-size: clamp(1.875rem, 4.5vw + 0.5rem, 3.5rem);
+  font-size:  clamp(1.775rem, 2.25vw + 0.5rem, 3.25rem);
 }
+.home-tagline {
+  display: inline;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
 
+  color: var(--color-text-secondary);
+  margin-top: var(--spacing-sm);
+  opacity: 0.8;
+}
 .building-wrapper {
   position: relative;
   display: inline-block;
+  font-size: clamp(1.275rem, 2.5vw + 0.5rem, 2rem); /* Remove extra space below SVG */
+}
+.home-badge{
+  font-family: Inter, sans-serif;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
+/* Pulsing green dot */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+@keyframes pulse-green {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 .building-svg {
   position: absolute;
   bottom: -16px;

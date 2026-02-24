@@ -90,7 +90,7 @@
 
 .footer-subheading {
     font-family: var(--font-primary);
-    font-size: var(--text-lg);
+    font-size: var(--text-md);
     color: var(--color-text-primary);
     margin: 0;
     line-height: var(--leading-relaxed);
@@ -111,7 +111,7 @@
     align-items: center;
     justify-content: center;
     gap: var(--spacing-sm);
-    padding: var(--spacing-sm) var(--spacing-lg);
+    padding: 0.625rem 1.25rem;
     font-family: var(--font-primary);
     font-size: var(--text-base);
     font-weight: var(--font-semibold);
@@ -120,6 +120,7 @@
     transition: all var(--transition-fast);
     min-height: var(--touch-target-min);
     min-width: 120px;
+    box-sizing: border-box;
 }
 
 .footer-btn-secondary {

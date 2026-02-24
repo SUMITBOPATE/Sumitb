@@ -49,10 +49,20 @@ function Head() {
       </div>
 
       <main className="home-main">
+        <p>Hi,   I&apos;m</p>
         <h1 className="home-headline">
-          I&apos;m Sumit, <br />
-          <span className="building-wrapper">
-            building &nbsp;
+        Sumit Bopate <br /></h1>
+
+
+        <div className="home-tagline-container">
+          <p className="home-tagline">Full Stack Developer  </p>
+          <span className="home-badge">
+            <span className="pulse-dot"></span>
+            open to work
+          </span>
+        </div>
+        {/* <span className="building-wrapper">
+            Building &nbsp;
             <svg
               className="building-svg"
               viewBox="0 0 550 80"
@@ -67,9 +77,10 @@ function Head() {
                 strokeLinejoin="round"
               />
             </svg>
-          </span>
-          products for <br></br> <em className="emphasized-text"> public</em>.
-        </h1>
+          
+          products for <br></br> <em className="emphasized-text"> public</em>
+          .</span> */}
+       
       </main>
 
       <ProfileCards />

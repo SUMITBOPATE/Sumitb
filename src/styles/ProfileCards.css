@@ -56,7 +56,7 @@
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-md);
     padding: var(--spacing-md) var(--spacing-sm) var(--spacing-sm) var(--spacing-sm);
-    font-size: var(--text-base);
+    font-size: var(--text-md);
   }
 
   .profile-card-left,
@@ -65,8 +65,8 @@
   }
 
   .profile-icon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -75,10 +75,15 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
     padding: var(--spacing-sm) var(--spacing-xs) 0 var(--spacing-xs);
-    font-size: var(--text-sm);
+    font-size: var(--text-base);
   }
 
   .profile-card-left {
     gap: var(--spacing-sm);
+  }
+
+  .profile-icon {
+    width: 16px;
+    height: 16px;
   }
 }

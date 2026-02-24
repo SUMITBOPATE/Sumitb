@@ -53,7 +53,7 @@
 
 :root {
   /* Font Families */
-  --font-primary: "Open Sans", serif;
+  --font-primary: Inter, sans-serif;
   --font-nav: "Funnel Sans", sans-serif;
   --font-mono: 'SF Mono', 'Fira Code', monospace;
   --font-mono-alt: 'Geist Mono', 'SF Mono', monospace;
@@ -223,7 +223,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: 0.625rem 1rem;
   background: var(--color-bg-primary);
   border: var(--border-solid);
   border-radius: var(--radius-md);
@@ -237,6 +237,7 @@
   /* WCAG compliant touch target */
   min-height: var(--touch-target-min);
   min-width: 100px;
+  box-sizing: border-box;
 }
 
 .btn-link:hover {
