@@ -1,19 +1,19 @@
-
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
+  const location = useLocation();
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" aria-label="Main Navigation">
       <div className="navbar-container">
         {/* Logo */}
-        <Link to="/" className="navbar-logo" aria-label="Home">
+        <Link to="/" className="navbar-logo" aria-label="Go to homepage">
           <svg
             width="32"
             height="32"
             viewBox="0 0 32 32"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
             className="logo-icon"
           >
             <path d="M16 4L12 10H20L16 4Z" fill="currentColor" />
@@ -24,21 +24,26 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <div className="nav-links">
-          <Link to="/about" className="nav-link">
+          <Link 
+            to="/about" 
+            className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
+          >
             About
           </Link>
+          
           <Link to="/experiments" className="resume-button">
-            <span>Experiments </span>
+            <span>Experiments</span>
             <svg
               className="arrow-icon"
-              width="16"
-              height="16"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              <path d="M7 17L17 7M17 7H7M17 7V17" />
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
           </Link>
         </div>

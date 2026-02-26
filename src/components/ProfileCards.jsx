@@ -7,7 +7,7 @@ export const ProfileCards = () => {
   return (
     <div className="profile-cards">
         <div className="profile-card-right">
-      <p>    <CodeXml size={24} className="profile-icon"  />Front End Developer</p>
+      <p>    <CodeXml size={24} className="profile-icon"  />Freelancer</p>
        <p>  <MapPin  size={24} className="profile-icon" />Nagpur,India</p> 
        <p> <Mail size={24} className="profile-icon" />sumitbopate888@gmail.com</p>
  </div>

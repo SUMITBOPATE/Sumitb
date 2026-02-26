@@ -8,13 +8,14 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import "./styles/global.css"
 import "./App.css"
-
+import { Analytics } from '@vercel/analytics/react';
 function App() {
   return (
     <>
       <div className="main">
         <div className="app-grid-background">
           <div className="container">
+             <Analytics />
             <Routes>
               <Route path="/" element={
                 <>
